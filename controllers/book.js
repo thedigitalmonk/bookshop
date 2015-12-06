@@ -45,8 +45,10 @@ exports.updateBook = function(req, res){
 
 exports.searchBook = function(req, res){
     var keyword = req.body.keyword;
-    var results = Books.filter(function(el){
-      return (el.name === keyword);
+    var Results = Books.filter(function(el){
+      return (el.name == keyword);
     });
-    res.send(results);
+    res.render('results', {
+      results: Results
+    });
 };

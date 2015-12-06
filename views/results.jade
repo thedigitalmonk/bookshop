@@ -11,10 +11,5 @@ block content
           tbody
             each result in results
               tr
-                td
-                  a(href="/books/#{$index}") #{book.name}
-                td Rs. #{book.price}
-                td
-                  a(href="/books/#{$index}/edit" class="glyphicon glyphicon-edit")
-                td
-                  a(href="/books/#{$index}/delete" class="glyphicon glyphicon-trash")
+                td #{result.name}
+                td Rs. #{result.price}
