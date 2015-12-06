@@ -1,0 +1,20 @@
+extends layout.jade
+block content
+    h1 Our Catalog
+    .row
+      .col-md-8.col-md-offset-2
+        table.table
+          thead
+            tr
+              th Books
+              th Price
+          tbody
+            each book in books
+              tr
+                td
+                  a(href="/books/#{$index}") #{book.name}
+                td Rs. #{book.price}
+                td
+                  a(href="/books/#{$index}/edit" class="glyphicon glyphicon-edit")
+                td
+                  a(href="/books/#{$index}/delete" class="glyphicon glyphicon-trash")
