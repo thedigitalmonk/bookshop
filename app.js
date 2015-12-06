@@ -25,7 +25,9 @@ app.get('/books/:index/edit', bookController.editBook);
 
 app.post('/books/:index/edit', bookController.updateBook);
 
-app.post('/books/:index/delete', bookController.removeBook);
+app.get('/books/:index/delete', bookController.removeBook);
+
+app.post('/search/:keyword', bookController.searchBook);
 
 app.listen(3000, function(){
   console.log("Express Server at port 3000");

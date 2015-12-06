@@ -42,3 +42,11 @@ exports.updateBook = function(req, res){
     Books[req.params.index].price = req.body.price;
     res.redirect("/books");
 };
+
+exports.searchBook = function(req, res){
+    var keyword = req.body.keyword;
+    var results = Books.filter(function(el){
+      return (el.name === keyword);
+    });
+    res.send(results);
+};
