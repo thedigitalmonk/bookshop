@@ -2,7 +2,9 @@ extends layout.jade
 block content
     h1 Search Result
     .row
-      .col-md-8.col-md-offset-2
+      .col-md-12
+        p We've found #{results.length} book/s with that name.
+      .col-md-8
         table.table
           thead
             tr
